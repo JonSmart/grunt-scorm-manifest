@@ -60,6 +60,12 @@ Default value: `'CourseID'`
 
 This is used to define the top-level course ID.
 
+#### options.courseVersion
+Type: 'String'
+Default value: '1.0'
+
+This is used to define the course Version number - used when compressing the package.
+
 #### options.SCOtitle
 Type: `String`
 Default value: `'SCO Title'`

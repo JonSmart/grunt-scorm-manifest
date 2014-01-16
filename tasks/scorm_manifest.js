@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         var options = this.options({
             version: '2004',
             courseId: 'CourseID',
+            courseVersion: '1.0',
             SCOtitle: 'SCO Title',
             moduleTitle: 'Module',
             launchPage: 'index.html',
@@ -72,6 +73,10 @@ module.exports = function(grunt) {
                     grunt.log.warn('Source file "' + filepath + '" not found.');
                     return false;
                 } else {
+                    if(filepath.indexOf(options.path) > -1){
+                        filepath = filepath.replace(options.path,'');
+                    }
+                    grunt.verbose.writeln('file: ' + filepath);
                     var tObj = {
                         file: {
                             '@href': filepath,
@@ -112,7 +117,7 @@ module.exports = function(grunt) {
        
        //Instatiate xmlbuilder using xmlObj
         var xmlDoc = require('xmlbuilder').create(xmlObj, 
-            {version: '1.0', encoding: 'UTF-8', standalone: true},
+            {version: '1.0', /*encoding: 'UTF-8',*/ standalone: true},
             {ext: null},
             {allowSurrogateChars: false, headless: false, stringify: {}});
         
