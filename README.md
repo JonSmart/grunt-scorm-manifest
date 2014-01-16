@@ -105,12 +105,12 @@ scorm_manifest: {
 		launchPage: 'the_launchpage.html',
 		path: './'
 	},
-	files: [{
+	files: {
 				expand: true,	 	// required
 				cwd: './', 			// start looking for files to list in the same dir as Gruntfile 
 				src: ['**/*.*'], 	// file selector (this example includes subdirectories)
 				filter: 'isFile'	// required
-			}],
+			},
 },
 ```
 
