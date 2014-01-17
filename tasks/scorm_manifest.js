@@ -117,7 +117,7 @@ module.exports = function(grunt) {
        
        //Instatiate xmlbuilder using xmlObj
         var xmlDoc = require('xmlbuilder').create(xmlObj, 
-            {version: '1.0', /*encoding: 'UTF-8',*/ standalone: true},
+            {version: '1.0', encoding: 'UTF-8' /*,standalone: true*/},
             {ext: null},
             {allowSurrogateChars: false, headless: false, stringify: {}});
         
